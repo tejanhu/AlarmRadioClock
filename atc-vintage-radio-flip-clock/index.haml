@@ -1,0 +1,44 @@
+.clock-wrapper
+	.bg
+	.knob
+	.knob-lines#knob-lines
+		- (0..14).each do |i|
+			.knob-line
+	.btn#ampm
+	.btn.radio-btn#radio-btn
+		%span radio
+	.logo Ika
+	.minutes
+		.dizaines
+			- (0..5).each do |i|
+				.number{:id => "minutes-dizaines-#{i}"} 
+					.up
+						.digit #{i}
+					.down
+						.digit #{i}
+		.unites
+			- (0..9).each do |i|
+				.number{:id => "minutes-unites-#{i}"} 
+					.up
+						.digit #{i}
+					.down
+						.digit #{i}
+	.hours
+		.dizaines
+			- (0..1).each do |i|
+				.number{:id => "hours-dizaines-#{i}"} 
+					.up
+						.digit #{i}
+					.down
+						.digit #{i}
+		.unites
+			- (0..9).each do |i|
+				.number{:id => "hours-unites-#{i}"} 
+					.up
+						.digit #{i}
+					.down
+						.digit #{i}
+	.seconds-wrapper
+		#seconds.seconds
+			- (0..59).each do |i|
+				.second #{i}
